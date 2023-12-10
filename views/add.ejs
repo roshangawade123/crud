@@ -1,0 +1,66 @@
+<!-- views/add.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Item</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      width: 80%;
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0ab913;
+    }
+  </style>
+</head>
+<body>
+  <form action="/add" method="post">
+    <h1>Add Item</h1>
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" required>
+    <label for="summary">Summary:</label>
+    <textarea name="summary" rows="4" required></textarea>
+    <button type="submit">Add Item</button>
+  </form>
+</body>
+</html>
